@@ -14,7 +14,7 @@ function Header() {
         </ul>
       </nav>
       <div className="search">
-        <input type="text" placeholder="Search Hear" />
+        <input type="text" placeholder="Search here" />
       </div>
       <div className="user">Lyckabc</div>
     </header>

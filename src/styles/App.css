@@ -170,6 +170,48 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
+/* Bookcase page css Folder Structure  */
+.folder-structure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-title {
+  margin-bottom: 20px;
+}
+
+.book-cover {
+  width: 200px;
+  height: 300px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.folder-list {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+  max-width: 600px;
+}
+
+.folder-list li {
+  background-color: #f0f0f0;
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.folder-list li:hover {
+  background-color: #e0e0e0;
+}
+
+
 /* 태블릿 (768px 이상) */
 @media (min-width: 768px) {
   .content {

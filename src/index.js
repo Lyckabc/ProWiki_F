@@ -1,19 +1,16 @@
 import React from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
-import './App.css';
+import ReactDOM from 'react-dom/client';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import App from './App';
+import './styles/index.css';
 
-function App() {
-  return (
-    <div className="app">
-      <Header />
-      <div className="content">
-        <Sidebar />
-        <MainContent />
-      </div>
-    </div>
-  );
-}
+const queryClient = new QueryClient();
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  </React.StrictMode>
+);
