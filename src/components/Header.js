@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <header>
       <nav>
         <ul>
-          <li>Main Hole (Logo)</li>
-          <li>Bookcase</li>
-          <li>Calendar</li>
-          <li>Quest</li>
-          <li>Arena</li>
-          <li>Map</li>
+          <li><Link to="/">Main Hole</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/bookcase">Bookcase</Link></li>
+          <li><Link to="/calendar">Calendar</Link></li>
+          <li><Link to="/quest">Quest</Link></li>
+          <li><Link to="/arena">Arena</Link></li>
+          <li><Link to="/map">Map</Link></li>
         </ul>
       </nav>
-      <div className="search">
-        <input type="text" placeholder="Search here" />
+      <div className="user-info">
+        <span>Lyckabc</span>
+        <button>User Menu</button>
       </div>
-      <div className="user">Lyckabc</div>
     </header>
   );
 }
-
 export default Header;

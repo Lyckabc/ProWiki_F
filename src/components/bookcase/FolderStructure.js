@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import API from '../services/api';
+import API from '../../services/api';
 
 function FolderStructure() {
   const [currentPath, setCurrentPath] = useState('./Project_2023');
@@ -27,6 +27,7 @@ function FolderStructure() {
       <div className="book-title">
         <div className="book-cover">
           <h2>{title}</h2>
+          <img src="/path-to-book-cover-image.png" alt="Project Sample" />
         </div>
       </div>
       <ul className="folder-list">
