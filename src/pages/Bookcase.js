@@ -10,28 +10,30 @@ import '../styles/Bookcase.css';
 
 function Bookcase() {
   return (
-    <div className="bookcase-page">
+    <div>
       <Header />
-      <div className="bookcase-content">
-        <Sidebar />
-        <div className="main-area">
-          <div className="top-section">
-            <FolderStructure />
-            <div className="right-section">
-              <div className="view-toggle">
-                <button className="grid-view-btn">Grid View</button>
-                <button className="list-view-btn">List View</button>
+      <div className="bookcase-page">
+        <div className="bookcase-content">
+          <Sidebar />
+          <div className="main-area">
+            <div className="top-section">
+              <FolderStructure />
+              <div className="right-section">
+                <div className="view-toggle">
+                  <button className="grid-view-btn">Grid View</button>
+                  <button className="list-view-btn">List View</button>
+                </div>
+                <SearchBook />
               </div>
-              <SearchBook />
             </div>
+            <div>
+              <Dividers />
+            </div>
+            <MainContent />
           </div>
-          <div>
-            <Dividers />
-          </div>
-          <MainContent />
         </div>
+        <FolderSelector />
       </div>
-      <FolderSelector />
     </div>
   );
 }
