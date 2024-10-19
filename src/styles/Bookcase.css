@@ -10,6 +10,7 @@
     display: flex;
     flex: 1;
     overflow: hidden;
+    background-color: transparent; 
   }
   
   .main-area {
@@ -93,4 +94,36 @@
   .grid-item .name {
     font-size: 0.9em;
     word-break: break-word;
+  }
+  .bookcase-content .sidebar {
+    position: fixed;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 1000;
+    width: 200px;
+  }
+  
+  .bookcase-content .sidebar:hover {
+    left: 0;
+  }
+  
+  .bookcase-content .year-selector {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bookcase-content .year {
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .bookcase-content .year:hover {
+    color: #007bff;
   }

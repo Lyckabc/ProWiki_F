@@ -6,7 +6,7 @@ import FolderStructure from '../components/bookcase/FolderStructure';
 import MainContent from '../components/bookcase/MainContent';
 import SearchBook from '../components/bookcase/searchBook';
 import Dividers from '../components/bookcase/Dividers';
-import '../styles/Bookcase.css'; // 북케이스 페이지 전용 스타일 파일
+import '../styles/Bookcase.css';
 
 function Bookcase() {
   return (
