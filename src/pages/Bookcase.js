@@ -7,6 +7,7 @@ import MainContent from '../components/bookcase/MainContent';
 import SearchBook from '../components/bookcase/searchBook';
 import Dividers from '../components/bookcase/Dividers';
 import '../styles/Bookcase.css';
+import PageView from '../components/bookcase/PageView';
 
 function Bookcase() {
   return (
@@ -34,6 +35,9 @@ function Bookcase() {
         </div>
         <FolderSelector />
       </div>
+      <div className="App">
+      <PageView />
+    </div>
     </div>
   );
 }
