@@ -1,0 +1,66 @@
+/* MainContent.css */
+
+.main-content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px); /* 헤더의 높이를 고려하여 조정 */
+  overflow: hidden;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.left-section {
+  border-right: 1px solid #ccc;
+}
+
+.fullscreen-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #121212;
+}
+
+/* 전체화면 모드 스타일 */
+.main-content.fullscreen .content-wrapper {
+  flex-direction: column;
+}
+
+.main-content.fullscreen .left-section {
+  display: none;
+}
+
+.main-content.fullscreen .right-section {
+  flex: 1;
+  width: 100%;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+  }
+
+  .left-section {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+}

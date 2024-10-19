@@ -97,3 +97,15 @@
     font-size: 0.9em;
     word-break: break-word;
   }
+
+  /* MainContent wrapper */
+  .main-content-wrapper {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    border-top: 1px solid #333;
+  }
+  .main-content-wrapper {
+    position: relative;
+  }
+  
