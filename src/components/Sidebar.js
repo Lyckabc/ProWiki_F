@@ -2,12 +2,11 @@ import React from 'react';
 
 function Sidebar() {
   return (
-    <aside>
+    <aside className="sidebar">
       <div className="year-selector">
-        <span>2024</span>
-        <span>2023</span>
+        <span className="year">2024</span>
+        <span className="year">2023</span>
       </div>
-      {/* Add more sidebar content as needed */}
     </aside>
   );
 }

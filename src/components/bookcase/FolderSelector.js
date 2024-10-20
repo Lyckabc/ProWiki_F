@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import API from '../services/api';
+import API from '../../services/api';
 
 function FolderSelector() {
   const { data: folderStructure, isLoading, error } = useQuery({
