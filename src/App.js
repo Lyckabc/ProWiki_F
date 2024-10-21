@@ -8,6 +8,7 @@ import Quest from './pages/Quest';
 import Arena from './pages/Arena';
 import Map from './pages/Map';
 import './styles/App.css';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/quest" element={<Quest />} />
           <Route path="/arena" element={<Arena />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
