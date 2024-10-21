@@ -1,25 +1,18 @@
-// components/MainContent.js
-import React, { useState } from 'react';
+import React from 'react';
 import GridView from './GridView';
 import ListView from './ListView';
 
-function MainContent() {
-  const [currentView, setCurrentView] = useState('grid');
-
-  const toggleView = (view) => {
-    setCurrentView(view);
-  };
-
+function ChangeItemShow({ currentView, toggleView }) {
   return (
     <main>
       <div className="view-toggle">
-        <button 
+        <button
           onClick={() => toggleView('grid')}
           className={currentView === 'grid' ? 'active' : ''}
         >
           Grid View
         </button>
-        <button 
+        <button
           onClick={() => toggleView('list')}
           className={currentView === 'list' ? 'active' : ''}
         >
@@ -33,4 +26,4 @@ function MainContent() {
   );
 }
 
-export default MainContent;
+export default ChangeItemShow;
