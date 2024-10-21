@@ -56,6 +56,9 @@ nav ul li {
 .user {
   color: var(--text-secondary);
 }
+.user-menu {
+  color: black;
+}
 
 /* Sidebar styles */
 aside {
