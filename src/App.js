@@ -1,30 +1,32 @@
 import React from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
-import FolderSelector from './components/FolderSelector';
-import FolderStructure from './components/FolderStructure';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Bookcase from './pages/Bookcase';
+import Calendar from './pages/Calendar';
+import Quest from './pages/Quest';
+import Arena from './pages/Arena';
+import Map from './pages/Map';
 import './styles/App.css';
-import User from './pages/Login';
-
-const queryClient = new QueryClient();
+import Login from './pages/Login';
 
 function App() {
   return (
-  <Router>
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
-        <Route path="/bookcase" element={<Bookcase />} />
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/quest" element={<Quest />} />
-        <Route path="/arena" element={<Arena />} />
-        <Route path="/map" element={<Map />} />
-        <Route path="/login" element={<User />} />
-      </Routes>       
-    </div>     
-  </Router>);
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/bookcase" element={<Bookcase />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/quest" element={<Quest />} />
+          <Route path="/arena" element={<Arena />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
+
 export default App;
