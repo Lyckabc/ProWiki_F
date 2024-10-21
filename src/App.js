@@ -12,33 +12,19 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-<<<<<<< Updated upstream
-    <QueryClientProvider client={queryClient}>
-      <div className="app">
-        <Header />
-        <div className="content">
-          <Sidebar />
-          <MainContent />
-          <FolderStructure />
-        </div>
-        <FolderSelector />
-=======
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
-          <Route path="/bookcase" element={<Bookcase />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route path="/quest" element={<Quest />} />
-          <Route path="/arena" element={<Arena />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="/login" element={<User />} />
-        </Routes>
->>>>>>> Stashed changes
-      </div>
-    </QueryClientProvider>
-  );
+  <Router>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/bookcase" element={<Bookcase />} />
+        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/quest" element={<Quest />} />
+        <Route path="/arena" element={<Arena />} />
+        <Route path="/map" element={<Map />} />
+        <Route path="/login" element={<User />} />
+      </Routes>       
+    </div>     
+  </Router>);
 }
-
 export default App;
