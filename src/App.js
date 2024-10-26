@@ -9,6 +9,7 @@ import Arena from './pages/Arena';
 import Map from './pages/Map';
 import './styles/App.css';
 import Login from './pages/Login';
+import Sign from './pages/Sign';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/arena" element={<Arena />} />
           <Route path="/map" element={<Map />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/sign" element={<Sign />} />
         </Routes>
       </div>
     </Router>
