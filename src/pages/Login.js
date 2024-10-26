@@ -1,4 +1,5 @@
 import React , { useState }from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import '../styles/Login.css'
 
@@ -22,7 +23,9 @@ function Login(){
                 {showPassword ? "👁️" : "👁️‍🗨️"}
                 </span>
             </div>
-            <p className="login-text">계정이 없으신가요? 회원가입</p>
+            <p className="login-text">
+                    계정이 없으신가요? <Link to="/sign">회원가입</Link>
+            </p>
             <div className="social-login-wrapper">
                 <button className="social-button naver">N</button>
                 <button className="social-button kakao">K</button>
