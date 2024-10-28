@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ProtectedRoute } from './components/utils/ProtectedRoute';
 import Home from './pages/Home';
-import About from './pages/About';
+// import About from './pages/About';
 import Bookcase from './pages/Bookcase';
 import Calendar from './pages/Calendar';
 import Quest from './pages/Quest';
@@ -15,16 +16,37 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
+      <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
-          <Route path="/bookcase" element={<Bookcase />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route path="/quest" element={<Quest />} />
-          <Route path="/arena" element={<Arena />} />
-          <Route path="/map" element={<Map />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign" element={<Sign />} />
+          {/* <Route path="/about" element={<About />} /> */}
+                    <Route path="/bookcase" element={
+                        <ProtectedRoute>
+                            <Bookcase />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/calendar" element={
+                        <ProtectedRoute>
+                            <Calendar />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/quest" element={
+                        <ProtectedRoute>
+                            <Quest />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/arena" element={
+                        <ProtectedRoute>
+                            <Arena />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/map" element={
+                        <ProtectedRoute>
+                            <Map />
+                        </ProtectedRoute>
+                    } />
         </Routes>
       </div>
     </Router>
