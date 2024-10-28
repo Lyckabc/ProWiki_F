@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # 환경설정
-.env
+
 .env.local
 .env.development.local
 .env.test.local
